@@ -37,6 +37,11 @@ public class App {
         System.out.println(2 | 4);
         System.out.println(Integer.toBinaryString(2));
         System.out.println(Integer.toBinaryString(4));
+
+        System.out.println();
+
+        System.out.println(1 + 2); // сложение
+        System.out.println("1" + 2); // конкетинация
     }
 
     private static boolean method1(boolean b) {

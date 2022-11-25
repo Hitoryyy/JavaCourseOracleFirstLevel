@@ -26,6 +26,15 @@ public class Elevator {
     }
 
     public void goDown() {
+
+        if (currentFloor == MIN_FLOORS) {
+            System.out.println("Cannot Go down");
+        } else {
+            System.out.println("Going down one floor.");
+            currentFloor--;
+            System.out.println("Floor: " + currentFloor);
+        }
+
         System.out.println("Going down one floor.");
         currentFloor--;
         System.out.println("Floot: " + currentFloor);
