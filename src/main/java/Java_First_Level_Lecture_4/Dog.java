@@ -6,9 +6,14 @@ public class Dog {
     public int age;
     public static String type = "Kolly"; // общее для всех
 
-    public Dog(String NewName, int NewAge) {
-        name = NewName;
-        age = NewAge;
+    // перегруженные конструкторы
+    public Dog(String name) {
+        this(name, 1); // вызов из одного конструктора - другого конструктора
+    }
+
+    public Dog(String name, int age) {
+        this.name = name;
+        this.age = age;
         makeVoice(); // при создании собака будет гавкать
     }
 
@@ -19,7 +24,7 @@ public class Dog {
     // собака умеет считать сумму любого количества значений
     public int calculate(int... dogsNumbers) { // аргумент с переменным числом значений (не массив)
         int sum = 0;
-        for (int i = 0; i < dogsNumbers.length; i++ ) {
+        for (int i = 0; i < dogsNumbers.length; i++) {
             sum += dogsNumbers[i];
         }
 
