@@ -14,7 +14,17 @@ public class App {
         System.out.println(sharik2);
         System.out.println(sharik.equals(sharik2));
 
-    }
+        int result = sharik.calculate(1,4,7,3); //сумма значений массива
+        System.out.println(result);
 
+        sharik.name = "Bobik";
+        System.out.println(sharik);
+        System.out.println(sharik2);
+
+        sharik.type = "Mops"; // не рекомендуется т.к. static
+        System.out.println(sharik.type);
+        System.out.println(sharik2.type);
+        System.out.println(Dog.type);
+    }
 
 }
