@@ -58,5 +58,25 @@ public class AppStringBuilder {
         // Замена элементов строки
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println(exam.replace('L', 'l'));
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+        String str = "mama mila ramu";
+        str = str.replace('m', 'p'); // изменений не будет, т.к. строки
+                                              // являются не изменяемыми объектами
+        // что-бы что-то произошло нужно строку созадать заново
+        System.out.println(str);
+
+        /*Пример*/
+        System.out.println("Пример");
+        String hello2 = "Hello";
+        String hello3 = "World";
+        int myInt1 = 2;
+        int myInt2 = 3;
+        System.out.println(myInt1 + myInt2 + hello2 + hello3);
+        System.out.println(hello2 + hello3 + myInt1 + myInt2);
+        System.out.println(hello2 + hello3 + (myInt1 + myInt2));
+        System.out.println("_________________________________");
+
+
     }
 }
