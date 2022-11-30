@@ -14,6 +14,10 @@ public class Human {
         setName(name);
     }
 
+    public void voice() {
+        System.out.println("Hello, my name is " + name);
+    }
+
     public String getName() {
         return name;
     }
