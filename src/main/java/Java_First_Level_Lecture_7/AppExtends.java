@@ -15,6 +15,13 @@ public class AppExtends {
 
         myRedShirt.wash();
         System.out.println(myRedShirt);
+
+        Object o = new B(); // проверка сравнимости объектов
+        System.out.println(o instanceof A);
+        System.out.println(o instanceof B);
+        System.out.println(o instanceof C);
+
+        // C c1 = (C)o; Exception
     }
 }
 
