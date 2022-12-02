@@ -1,6 +1,6 @@
 package Java_First_Level_Lecture_8;
 
-public abstract class Clothing implements Cleanable{
+public abstract class Clothing implements Cleanable, Comparable<Clothing> {
 
     private String name;
     private int size;
@@ -49,4 +49,18 @@ public abstract class Clothing implements Cleanable{
         return "[name: " + name + ", " + "size: " + size + ", " +
                 "price: " + price + "]";
     }
+
+    // интерфейс компарейбл
+    // рассказываем как сортировать (как объекты будут себя сравнивать)
+    @Override
+    public int compareTo(Clothing o) {
+        if (getPrice() > o.getPrice()) {
+            return 1;
+        }
+        if (getPrice() < o.getPrice()) {
+            return -1;
+        }
+        return 0;
+    }
+
 }
