@@ -1,15 +1,23 @@
 package Java_First_Level_Lecture_8;
 
-public abstract class Clothing {
+public abstract class Clothing implements Cleanable{
 
     private String name;
     private int size;
     private int price;
+    private static int counter = 0;
 
     public Clothing(String name, int size, int price) {
         this.name = name;
         this.size = size;
         this.price = price;
+        ++counter;
+    }
+
+    public abstract void wash();
+
+    public int getCounter() {
+        return counter;
     }
 
     public String getName() {
