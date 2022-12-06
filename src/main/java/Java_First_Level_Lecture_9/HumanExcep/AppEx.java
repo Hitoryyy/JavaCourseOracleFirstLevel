@@ -19,7 +19,7 @@ public class AppEx {
             System.out.println("Input human's name");
             String name = br.readLine();
             System.out.println("Input Human's age");
-            int age = Integer.parseInt(br.readLine());
+            int age = readNumber(br);
             while (humanEx == null) {
                 try {
                     humanEx = new HumanEx(name, age);
@@ -30,8 +30,8 @@ public class AppEx {
                 } catch (HumanAgeException e) {
                     System.out.println(e.getLocalizedMessage());
                     System.out.println("Input Human's age");
-                    age = Integer.parseInt(br.readLine());
-                }
+                    age = readNumber(br);
+                } 
             }
         }  catch (IOException e) {
             e.printStackTrace();
@@ -39,4 +39,17 @@ public class AppEx {
 
         return humanEx;
     }
+
+    public static int readNumber(BufferedReader br) throws IOException {
+        while (true) {
+            try {
+                return Integer.parseInt(br.readLine());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+                System.out.println("Try again");
+            }
+        }
+    }
+
+
 }
