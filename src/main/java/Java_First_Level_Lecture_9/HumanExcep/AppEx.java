@@ -14,8 +14,8 @@ public class AppEx {
 
     private static HumanEx createHumanConsole() {
         HumanEx humanEx = null;
+        BufferedReader br = new BufferedReader(new InputStreamReader(new UbclosedStrim(System.in)));
         try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Input human's name");
             String name = br.readLine();
             System.out.println("Input Human's age");
@@ -31,7 +31,9 @@ public class AppEx {
                     System.out.println(e.getLocalizedMessage());
                     System.out.println("Input Human's age");
                     age = readNumber(br);
-                } 
+                } finally {
+                    br.close();
+                }
             }
         }  catch (IOException e) {
             e.printStackTrace();
@@ -41,6 +43,7 @@ public class AppEx {
     }
 
     public static int readNumber(BufferedReader br) throws IOException {
+
         while (true) {
             try {
                 return Integer.parseInt(br.readLine());
